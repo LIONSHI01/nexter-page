@@ -15,9 +15,6 @@
   row-gap: 1.5rem;
   justify-content: center;
 
-&__test{
-  
-}
 
   &__logo {
     height: 3rem;
@@ -25,11 +22,35 @@
   }
 
   &__seenon-text {
+    font-size: 1.6rem;
+    color: $color-grey-light-2;
+
+    display: grid;
+    // KEYNOTE: difine three columns width
+    grid-template-columns: 1fr max-content 1fr;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.5rem;
+
+    &::before,&::after{
+      content: '';
+      // width: 100%;
+      height: 1px;
+      background-color: currentColor;
+    }
   }
 
   &__seenon-logos {
+
+display: grid;
+grid-template-columns: repeat(4,1fr);
+column-gap: 3rem;
+justify-items: center;
+
+
     img {
       height: 2.5rem;
+      filter: brightness(70%);
     }
   }
 
